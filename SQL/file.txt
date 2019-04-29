@@ -1,0 +1,2 @@
+Customer;id;nama;faaak;#
+tukang;id;nama;bapak;#

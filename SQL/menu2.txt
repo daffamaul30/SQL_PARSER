@@ -1,0 +1,42 @@
+public void menu2(ArrayList tabel,ArrayList BFR){
+        int i;
+        int blockdata,blockindeks;
+        int blockingfactor;
+        int j=2;
+        int fan=0;
+        int k = 4;
+        int n = 3;
+        
+        for (i=0;i<tabel.size();i++){
+            if(tabel.get(i) == " "){
+                j = j+3;
+                k = k+3;
+                n = n+3;
+                blockingfactor = (int)BFR.get(1) / (int)BFR.get(j);
+                fan = (int)BFR.get(1) / ((int)BFR.get(0) + (int)BFR.get(k));
+                blockdata = ((int)BFR.get(n) / blockingfactor);
+                if((int)BFR.get(n) % blockingfactor > 0){
+                    blockdata = blockdata + 1;
+                }
+                blockindeks = (int)BFR.get(n) / fan;
+                if((int)BFR.get(n) % fan > 0){
+                    blockindeks = blockindeks + 1;
+                }
+                System.out.println("Block Data "+tabel.get(i+1)+" "+blockdata);
+                System.out.println("Block Index "+tabel.get(0)+" "+blockindeks);
+            }else if(i==0){
+                blockingfactor = (int)BFR.get(1) / (int)BFR.get(j);
+                fan = (int)BFR.get(1) / ((int)BFR.get(0) + (int)BFR.get(4));
+                blockdata = (int)BFR.get(3) / blockingfactor;
+                if((int)BFR.get(3) % blockingfactor > 0){
+                    blockdata = blockdata + 1;
+                }
+                blockindeks = (int)BFR.get(3) / fan;
+                if((int)BFR.get(3) % fan > 0){
+                    blockindeks = blockindeks + 1;
+                }
+                System.out.println("Block Data "+tabel.get(0)+" "+blockdata);
+                System.out.println("Block Index "+tabel.get(0)+" "+blockindeks);
+            }
+        }
+    };

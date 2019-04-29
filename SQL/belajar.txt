@@ -1,0 +1,4 @@
+P 4;B 8192;#
+customer;id_customer;nama_customer;notelp;R 128;n 100000;V 12;#
+barang;kode_barang;nama_barang;harga;R 8;n 150;V 6;#
+membeli;kode_transaksi;id_customer;kode_barang;jumlah;R 10;n 1000;V 7;#
